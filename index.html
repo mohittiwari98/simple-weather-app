@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- links -->
+    <link rel="icon" type="png" href="icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Title -->
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <div class="pc">
+      <!-- nav section -->
+      <nav>
+        <ul>
+          <li>
+            <a class="active" href="index.html"
+              ><i class="fa-solid fa-location-arrow"></i
+            ></a>
+          </li>
+          <li>@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+            * {
+              padding: 0;
+              margin: 0;
+              font-family: poppins, sans-serif;
+              box-sizing: border-box;
+            }
+            
+            body {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+            
+              background-image: url(https://t3.ftcdn.net/jpg/03/81/65/06/360_F_381650616_Of9WwujWJBuYQi9EYRNy2tlDCsVlgkXu.webp);
+            }
+            
+            .card {
+              backdrop-filter: blur(20px) saturate(140%);
+              -webkit-backdrop-filter: blur(20px) saturate(140%);
+              background-color: rgba(0, 0, 0, 0.523);
+              border-radius: 12px;
+              border: 1px solid rgba(255, 255, 255, 0.125);
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              width: 60%;
+              height: 80vh;
+              box-shadow: rgba(77, 77, 80, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                rgba(252, 253, 255, 0.415) 0px -2px 6px 0px inset;
+              margin-top: 60px;
+              border-radius: 10px;
+            }
+            
+            @media screen and (max-width: 800px) {
+              .card {
+                width: 90%;
+                height: 400px;
+              }
+            }
+            
+            #logo {
+              width: 18rem;
+              height: 18rem;
+              margin-top: -5rem;
+            }
+            
+            @media screen and (max-width: 800px) {
+              #logo {
+                width: 10rem;
+                height: 10rem;
+              }
+            }
+            
+            #name {
+              color: rgb(155, 4, 255);
+            }
+            
+            .ass {
+              color: rgb(255, 30, 5);
+            }
+            
+            #self {
+              color: rgb(255, 255, 255);
+            }
+            
+            @media screen and (max-width: 800px) {
+              #self {
+                font-size: 16px;
+              }
+            }
+            
+            #voice {
+              width: 100px;
+              height: 100px;
+              display: none;
+            }
+            
+            #btn {
+              width: 40%;
+              margin-top: 20px;
+              background: #fc4a1a;
+              background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+              background: linear-gradient(to right, #f7b733, #fc4a1a);
+              padding: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+              font-size: 1rem;
+              font-weight: 600;
+              color: aliceblue;
+              border-radius: 20px;
+              border: none;
+              cursor: pointer;
+              box-shadow: 2px 2px 5px #fc4a1a, 2px 2px 5px #f7b733;
+              transition: all 0.8s;
+            }
+            
+            @media screen and (max-width: 800px) {
+              #btn {
+                font-size: 0.8rem;
+                width: 70%;
+              }
+            }
+            
+            #btn:hover {
+              box-shadow: 2px 2px 10px #fc4a1a, 2px 2px 10px #f7b733;
+              letter-spacing: 2px;
+            }
+            
+            footer {
+              color: rgb(61, 61, 61);
+              margin-top: 20px;
+              font-weight: 800;
+            }
+            <a href="search.html"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></a>
+          </li>
+          <li>
+            <a href="world.html"><i class="fa-solid fa-earth-americas"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- main section -->
+      <div id="screen">
+        <!-- city name -->
+        <div class="city-name">
+          <i class="fa-solid fa-map-pin"></i>
+          <h1 id="city-name">Mumbai</h1>
+        </div>
+        <!-- weather icon -->
+        <div class="weather-icon-css">
+          <img class="weather-icon" src="sun.png" />
+        </div>
+        <!-- weather details -->
+        <div class="weather-description">
+          <div class="show-metric" id="metric">0°</div>
+          <div class="weather-details">
+            <div class="weather-main" id="weather-main">Sunnen</div>
+            <div class="h-f">
+              <div class="show-humidity">H: <span id="humidity">60</span></div>
+              ||
+              <div class="show-humidity">
+                F: <span id="feels-like">60</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Today-forecast -->
+        <div class="forcasts-box">
+          <div class="today-forecast">
+            <h4>TODAY</h4>
+            <div class="weather-icon-today">
+              <img class="weather-icons" src="sun.png" />
+            </div>
+            <div class="temp-today">
+              <span id="temp-min-today">50°</span><span>/ </span
+              ><span id="temp-max-today">55°</span>
+            </div>
+            <div class="weather-main-today" id="weather-main">Sunnen</div>
+          </div>
+
+          <!-- 5day Forecast -->
+          <div class="forecast">
+            <h5>6-DAYS FORECAST</h5>
+            <div id="forecast-box"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- script -->
+    <script src="main.js"></script>
+  </body>
+</html>
