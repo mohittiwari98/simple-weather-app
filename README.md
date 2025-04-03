@@ -23,17 +23,6 @@ Change Temperature Unit: Toggle between Celsius and Fahrenheit by clicking the u
 Installation
 To run the project locally:
 
-Clone the repository:
-git clone https://github.com/your-username/simple-weather-app.git
-Navigate to the project directory:
-cd simple-weather-app
-Open index.html in your preferred browser.
-No server-side setup is required. The project is entirely client-side and communicates with a weather API to fetch real-time data.
-API Key Setup (If Applicable)
-If you're using an API that requires an API key (e.g., OpenWeatherMap), you will need to:
-
-Sign up for an API key from your chosen weather API provider.
-
 In the JavaScript file (script.js), replace the API_KEY placeholder with your actual API key:
 
 const apiKey = 'YOUR_API_KEY';
