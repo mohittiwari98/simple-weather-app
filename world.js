@@ -1,4 +1,5 @@
-let apiKey = "1e3e8f230b6064d27976e41163a82b77";
+let apiKey = "YOUR API";
+//YOU CAN USE YOUR OWN API
 let searchinput = document.querySelector(".searchinput");
 let box = document.querySelector(".box");
 let normalMessage = document.querySelector(".normal-message");
